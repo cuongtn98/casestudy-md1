@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="themify-icons/themify-icons.css">
+
+</head>
+<body onload="allop()">
+<div id="header">
+    <h3>Sgalleria</h3>
+    <ul class="nav">
+
+        <li><a href="">Home</a></li>
+        <li><a href="#pay-btn">View</a></li>
+        <li><a href="">product</a>
+            <ul class="navmore">
+                <li onclick="noibat()"><a href="#content"  >Sản phẩm nổi bật tin dùng </a></li>
+                <br>
+                <li onclick="luachon()"><a href="#content">Được lựa chọn nhiều nhất </a></li>
+
+            </ul>
+        </li>
+        <li><a href="">News</a>
+            <ul class="navmore" >
+                <li onclick="ngayle()"><a href="#content">Trang phục ngày lễ</a></li>
+                <br>
+                <li onclick="sukien()" ><a href="#content">rang phục sự kiện </a></li>
+
+            </ul>
+        </li>
+
+    </ul>
+    <div id="btn">
+        <a id="login" href="login.html"> login </a>
+        <input type="button" id="exitt" onclick="repage()" value="Exit">
+        <input type="button" id="addproduct" onclick="add()" value="Add">
+
+    </div>
+
+
+</div>
+<div id="slider">
+    <img id="imgContent" src="https://static-5.happynest.vn/storage/uploads/2022/02/large/4f8d3011c17989d4cdc40373ca228f35.jpg" alt="">
+    <input type="button" value="Đặt oline FB " id="pay-btn" onclick="oderFB()">
+</div>
+<div id="main">
+<div id="content">
+    <h3 id="text-content"> Sản Phẩm Nổi Bật</h3>
+    <h2 id="sub-content"> Vẻ đẹp phụ nữ Việt Nam </h2>
+</div>
+<div id="productMain"></div>
+<div id="footer">
+    <h3 id="textInFor"> Nhà phân phối mẫu áo dài việt nam  </h3> <br>
+    <h4 class="subInFor">Địa chỉ liên hệ: Tòa Thánh Tây Ninh, Huyện Hòa Thành, Tỉnh Tây Ninh</h4><br>
+    <h4 class="subInFor">   Điện thoại: 0111333111     –     Email: cuonghoa1998@yahoo.com</h4>
+</div>
+</div>
+</body>
+<script src="productjs.js"></script>
+<script src="jslogin.js"></script>
+</html>
