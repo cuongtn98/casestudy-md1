@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css.css">
-    <link rel="stylesheet" href="themify-icons/themify-icons.css">
 
 </head>
 <body onload="allop()">
 <div id="header">
     <h3>Sgalleria</h3>
     <ul class="nav">
-
         <li><a href="">Home</a></li>
         <li><a href="#pay-btn">View</a></li>
         <li><a href="">product</a>
@@ -34,12 +32,10 @@
     </ul>
     <div id="btn">
         <a id="login" href="login.html"> login </a>
-        <input type="button" id="exitt" onclick="repage()" value="Exit">
-        <input type="button" id="addproduct" onclick="add()" value="Add">
+        <input type="button" id="exitt" onclick="repage()" value="LOG-UOT">
+        <a href="#taomoi"> <input type="button" id="addproduct" onclick="add()" value="ADD"></a>
 
     </div>
-
-
 </div>
 <div id="slider">
     <img id="imgContent" src="https://static-5.happynest.vn/storage/uploads/2022/02/large/4f8d3011c17989d4cdc40373ca228f35.jpg" alt="">
@@ -50,6 +46,32 @@
     <h3 id="text-content"> Sản Phẩm Nổi Bật</h3>
     <h2 id="sub-content"> Vẻ đẹp phụ nữ Việt Nam </h2>
 </div>
+    <div id="taomoi"  style="margin-left:10%;
+                            display: none;
+">
+        <p>nhập link ảnh</p>
+        <label for="anhurl"> <input type="text" value="" id="anhurl"
+                                    style="padding: 4px 20px;
+    border-radius: 5px;
+"
+        > </label><br>
+        <br>
+        <p> mua hoặc thuê</p>
+        <label for="payorrent"> <input type="text" value="" id="payorrent"
+                                       style="padding: 4px 20px;
+                                          border-radius: 5px;
+"
+        > </label> <br>
+        <br>
+        <p> thông tin gía sản phẩm </p>
+        <label for="gia"> <input type="text" value="" id="gia"
+                                 style="padding: 4px 20px;
+                             border-radius: 5px;
+"
+        > </label> <br>
+        <br>
+        <input class="submitt" type="submit" onclick="uploadproduct()" />
+    </div>
 <div id="productMain"></div>
 <div id="footer">
     <h3 id="textInFor"> Nhà phân phối mẫu áo dài việt nam  </h3> <br>

@@ -5,15 +5,15 @@
 }
 
 html {
+    background-color: #e0e0e0;
     scroll-behavior: smooth;
-    font-family: Calibri;
+    font-family: Calibri, serif;
 }
 
 #header {
     width: 100%;
     height: 70px;
     background-color: #b4936c;
-    position: relative;
     z-index: 1;
     position: fixed;
 
@@ -51,13 +51,13 @@ html {
 .nav li a:hover {
     background-color: #c4c499;
 }
-#header #btn #addproduct {
+#header #btn #addproduct{
     display: none;
     color: #484645;
     text-decoration: none;
     margin-top: -5px;
     background-color: #e8e4d8;
-    border: 0px solid #efede9;
+    border: 0 solid #efede9;
     border-radius: 10px;
     padding: 10px 20px;
     margin-right: 30px;
@@ -81,7 +81,7 @@ html {
     text-decoration: none;
     margin-top: -5px;
     background-color: #e8e4d8;
-    border: 0px solid #efede9;
+    border: 0 solid #efede9;
     border-radius: 10px;
     padding: 10px 20px;
     margin-right: 30px;
@@ -94,7 +94,7 @@ html {
     text-decoration: none;
     margin-top: -5px;
     background-color: #e8e4d8;
-    border: 0px solid #efede9;
+    border: 0 solid #efede9;
     border-radius: 10px;
     padding: 10px 20px;
     margin-right: 30px;
@@ -135,7 +135,6 @@ li:hover > .navmore {
 }
 #slider #pay-btn {
     border: none;
-    border: none;
     border-radius: 50px;
     position: relative;
     top: -90px;
@@ -153,7 +152,7 @@ li:hover > .navmore {
  #content #text-content {
      color: #535d48;
      text-align: center;
-     font-family: "Comic Sans MS";
+     font-family: "Comic Sans MS", serif;
      font-size: 40px;
      font-weight: lighter;
  }
@@ -208,11 +207,11 @@ li:hover > .navmore {
 }
 #footer {
     color: #6b5d3a;
-    padding: 100px  0px ;
+    padding: 100px  0 ;
     background-color: #efe8db;
     margin-top: 200px;
     text-align: center;
-    font-family: Cursive;
+    font-family: Cursive, serif;
 }
 #productMain .edittag {
     border: none;
@@ -244,4 +243,21 @@ li:hover > .navmore {
 .deletag:hover {
     cursor: pointer;
     background-color: #a1b283;
+}
+#mucchon {
+    font-family: "Comic Sans MS", serif;
+}
+.submitt {
+    color: black;
+    background-color: #9b968e;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 0 solid wheat;
+}
+.submitt:hover {
+    background-color: #816b6b;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 0 solid wheat;
 }

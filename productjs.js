@@ -32,27 +32,22 @@ var product5 = new product("./caseimg/5.jpg","THUÊ"," 950K/1day") ;
 var product6 = new product("./caseimg/6.jpg", "BÁN", "700K/1day") ;
 var product7 = new product("./caseimg/7.jpg", "THUÊ","1200K/1day") ;
 var product8 = new product("./caseimg/10.jpg", "THUÊ","1450K/1day") ;
-
 let productArr1 = [product0, product1,product2,product3,product6,product5,product7,product8];
 var productArr0 = [product0, product1,product2];
 var productArr2 = [product3, product6,product5];
 var productArr3 = [product7, product8];
 var productArr4 = [product2,product7];
 function display(arr) {
-  const editmang = document.getElementsByClassName("edit");
-    let user = localStorage.getItem("user");
-    if (user !== null) {
-        document.getElementById("login").innerHTML = "<a>" + user + "</a>"
+    var user = localStorage.getItem("user");
+    if ( user !== null) {
+        document.getElementById("login").innerHTML = "<h4>" + user + "</h4>"
         document.getElementById("exitt").style.display = "block";
         document.getElementById("addproduct").style.display = "block";
-        // // for (let i=0;i<editmang.length; i++) {
-        // //     editmang.getElementsByClassName('edit')[i].style.display = "block";
-        // //     editmang.getElementsByClassName('delet')[i].style.display = "block";
-        //
-        // }
+        document.getElementById("login").style.pointerEvents="none";
     }
     let result = "";
     for (let i = 0; i < arr.length; i++) {
+        if (user !== null) {
         result +=
             "<ul class='listProduct'>" +
 
@@ -67,6 +62,19 @@ function display(arr) {
             "<li class='delet'> <button class='deletag' onclick='deleteProd("+i +")'>" +"Delete" +" </button>  </li>" +
 
             "</ul>"
+        } else {
+            result +=
+                "<ul class='listProduct'>" +
+
+                "<li><img class='img-main' src='" + arr[i].getImg() + "' alt=''></li>" +
+
+                "<li class='status'> <button class='btn-tt'> " + arr[i].getStatus() + "</button></li>" +
+
+                "<li class='price' >" + arr[i].getprice() + "</li>" +
+
+                "</ul>"
+        }
+
     }
     document.getElementById("productMain").innerHTML = result;
 }
@@ -87,31 +95,38 @@ function sukien() {
 }
 function allop() {
     display(productArr1)
-
 }
 
+let user = localStorage.getItem("user");
+if (user === null) {
+}   else {
     function edit(index) {
         let img = prompt("Input url");
-        let status = prompt("status Rent Or Buy: ")
-        let price = prompt("Input price:");
+        let inputstatus = prompt("status Rent Or Buy: ")
+        let status = inputstatus.toUpperCase()
+        let inputprice = prompt("Input price:");
+        let price = inputprice.toUpperCase()
         productArr1[index] = new product(img, status, price);
         display(productArr1);
     }
 
 
-function add() {
-        let img = prompt("Input url");
-        let input = prompt("status Rent Or Buy: ");
-        let status = input.toUpperCase()
-        let inputPrice = prompt("Input price:");
-        let price = inputPrice.toUpperCase()
-        let productNew = new product (img, status, price);
-         productArr1.push(productNew);
-        display(productArr1);
-    }
+        function uploadproduct() {
+            let img = document.getElementById("anhurl").value;
+            let input = document.getElementById("payorrent").value;
+            let status = input.toUpperCase()
+            let inputPrice = document.getElementById("gia").value;
+            let price = inputPrice.toUpperCase()
+            let productNew = new product(img, status, price);
+            productArr1.push(productNew);
+            display(productArr1);
+        }
 
     function deleteProd(index) {
-        productArr1.splice(index,1);
+        productArr1.splice(index, 1);
         display(productArr1)
     }
-
+}function add() {
+    document.getElementById("taomoi").style.display="block";
+    display(productArr1)
+}

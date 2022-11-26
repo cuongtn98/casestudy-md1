@@ -1,4 +1,3 @@
-
 function dangnhap() {
     let username = "admin";
     let password = "abc123";
@@ -11,11 +10,11 @@ function dangnhap() {
         document.getElementById("text").innerHTML = "ERROR"
     }
 }
+    function repage() {
+        window.localStorage.removeItem("user")
+        window.location.href = "./index.html"
+    }
 
-function repage() {
-    window.localStorage.removeItem("user")
-    window.location.href="./index.html"
-}
-function oderFB() {
-    window.location.href = "https://www.facebook.com/Tam.by.trang/";
-}
+    function oderFB() {
+        window.location.href = "https://www.facebook.com/Tam.by.trang/";
+    }
