@@ -70,7 +70,7 @@ function display(arr) {
 
                 "<li class='status'> <button class='btn-tt'> " + arr[i].getStatus() + "</button></li>" +
 
-                "<li class='price' >" + arr[i].getprice() + "</li>" +
+                "<li class='price' > <span class='text-price'>" + arr[i].getprice() + "</span></li>" +
 
                 "</ul>"
         }
