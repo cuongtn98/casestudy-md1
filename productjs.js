@@ -109,24 +109,25 @@ if (user === null) {
         productArr1[index] = new product(img, status, price);
         display(productArr1);
     }
+    function uploadproduct() {
+        let img = document.getElementById("anhurl").value;
+        let input = document.getElementById("payorrent").value;
+        let status = input.toUpperCase()
+        let inputPrice = document.getElementById("gia").value;
+        let price = inputPrice.toUpperCase()
+        let productNew = new product(img, status, price);
+        document.getElementById("taomoi").style.display="none";
+        productArr1.push(productNew);
+        display(productArr1);
+        document.getElementById("anhurl").setAttribute("value","");
 
-
-        function uploadproduct() {
-            let img = document.getElementById("anhurl").value;
-            let input = document.getElementById("payorrent").value;
-            let status = input.toUpperCase()
-            let inputPrice = document.getElementById("gia").value;
-            let price = inputPrice.toUpperCase()
-            let productNew = new product(img, status, price);
-            productArr1.push(productNew);
-            display(productArr1);
-        }
-
+    }
     function deleteProd(index) {
         productArr1.splice(index, 1);
         display(productArr1)
     }
 }function add() {
+    document.getElementById("anhurl").setAttribute("value","");
     document.getElementById("taomoi").style.display="block";
     display(productArr1)
 }
